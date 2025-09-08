@@ -1,6 +1,5 @@
 #!/bin/bash
-
-## This is a Slurm job script for Lab 2: mm-omp.cpp
+## Slurm job script for Lab 2: mm-omp.cpp
 
 #SBATCH --job-name=lab2-ex11-e0694444
 #SBATCH --nodes=1
@@ -12,40 +11,45 @@
 #SBATCH --error=logs/%j_error_lab2_ex11-e0694444.slurmlog
 #SBATCH --mail-type=NONE
 
-# Check that two arguments were passed (matrix size and number of openmp threads)
-#if [ ! "$#" -eq 2 ]
-#then
-#  echo "Expecting 2 arguments (<matrix size> <num threads>), got $#"
-#  exit 1
-#fi
+set -euo pipefail
+set -x
+cd "${SLURM_SUBMIT_DIR:-$PWD}"
 
-events="cycles,instructions,duration_time,\
-fp_arith_inst_retired.scalar_double,\
-fp_arith_inst_retired.128b_packed_double,\
-fp_arith_inst_retired.256b_packed_double,\
-fp_arith_inst_retired.512b_packed_double,\
-fp_arith_inst_retired.scalar_single,\
-fp_arith_inst_retired.128b_packed_single,\
-fp_arith_inst_retired.256b_packed_single,\
-fp_arith_inst_retired.512b_packed_single"
-
-if [ ! "$#" -eq 2 ]
-then
-  echo "Expecting 2 arguments (<matrix size> <num threads>), got $#"
+# ---- args: <matrix_size> <num_threads>
+if [ "$#" -ne 2 ]; then
+  echo "Usage: $0 <matrix_size> <num_threads>"
   exit 1
 fi
 
-echo "Running job: $SLURM_JOB_NAME!"
-echo "We are running on $(hostname)"
-echo "Job started at $(date)"
-echo "Arguments to your executable: $@"
+mkdir -p logs
+
+events="cycles,instructions,duration_time,\
+fp_arith_inst_retired.scalar_single"
+
+echo "Running job: $SLURM_JOB_NAME on $(hostname)"
+echo "Started: $(date)"
+echo "Args: size=$1 threads=$2"
 
 echo "Compiling..."
 srun g++ -fopenmp -o mm-omp mm-omp.cpp
 
 echo "Running perf stat..."
+export OMP_NUM_THREADS="$2"
+perf_out="logs/${SLURM_JOB_ID:-$$}_perf.csv"
+tmp="logs/${SLURM_JOB_ID:-$$}_perf.tmp"
 
-# Run 10 times
-perf stat -x , -r 10 -e "$events" -- ./mm-omp $@ 1>/dev/null 2>perf.tmp
+# If output file doesn't exist, we add a CSV header once
+if [ ! -f "$perf_out" ]; then 
+    echo "value,unit,event,percent_running,raw,metric,metric_unit,metric_name" > "$perf_out"
+fi
 
-echo "Job ended at $(date)"
+# CSV-style perf output; 10 repeats for mean±stddev in the last lines
+perf stat --no-big-num -x, -r 10 -e "$events" \
+    -o "$tmp" --append -- \
+    ./mm-omp "${1}" "${2}" 
+
+grep -Ev '^(#|$)' "$tmp" >> "$perf_out"
+
+echo "perf CSV saved to: $perf_out"
+echo "Finished: $(date)"
+
