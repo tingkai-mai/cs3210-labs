@@ -1,0 +1,7 @@
+Running job: lab2-ex11-e0694444!
+We are running on soctf-pdc-004.ddns.comp.nus.edu.sg
+Job started at Mon Sep  8 03:25:34 PM +08 2025
+Arguments to your executable: 100 20
+Compiling...
+Running perf stat...
+Job ended at Mon Sep  8 03:25:34 PM +08 2025

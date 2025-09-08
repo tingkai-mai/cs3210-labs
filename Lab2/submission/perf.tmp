@@ -1,0 +1,21 @@
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+Matrix multiplication took 0.00 seconds
+105111673,,cycles,2.21%,43490806,33.00,,
+108800828,,instructions,3.34%,45898313,35.00,1.04,insn per cycle
+13422101,ns,duration_time,3.49%,12545754,100.00,,
+0,,fp_arith_inst_retired.scalar_double,0.00%,34639882,26.00,,
+0,,fp_arith_inst_retired.128b_packed_double,0.00%,30814367,23.00,,
+0,,fp_arith_inst_retired.256b_packed_double,0.00%,46834715,39.00,,
+0,,fp_arith_inst_retired.512b_packed_double,0.00%,65745942,93.00,,
+764577,,fp_arith_inst_retired.scalar_single,21.74%,74390023,83.00,,
+0,,fp_arith_inst_retired.128b_packed_single,0.00%,79215926,73.00,,
+0,,fp_arith_inst_retired.256b_packed_single,0.00%,78270208,62.00,,
+0,,fp_arith_inst_retired.512b_packed_single,0.00%,62184855,48.00,,
