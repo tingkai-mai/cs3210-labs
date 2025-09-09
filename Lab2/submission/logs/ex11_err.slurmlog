@@ -1,0 +1,503 @@
++ cd /nfs/home/e0694444/cs3210-labs/Lab2/submission
++ '[' 1 -ne 1 ']'
++ mkdir -p logs
++ events=cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single
++ columns=jobid,size,threads,value,unit,event,percent_running,raw,percent_enabled,metric,metric_unit,metric_name
+++ hostname
++ echo 'Running job: lab2-ex11-e0694444 on soctf-pdc-004.ddns.comp.nus.edu.sg'
+++ date
++ echo 'Started: Tue Sep  9 11:43:28 AM +08 2025'
++ echo 'Args: size=1300'
++ echo Compiling...
++ srun g++ -fopenmp -o mm-omp mm-omp.cpp
++ echo 'Running perf stat...'
++ tmp=logs/784190_perf.tmp
++ MASTER_CSV=logs/784190_perf.csv
++ MAX_THREADS=20
+++ seq 1 30
++ THREAD_LIST='1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30'
++ echo 'Current partition xs-4114 has 20 threads.'
++ '[' '!' -f logs/784190_perf.csv ']'
++ echo jobid,size,threads,value,unit,event,percent_running,raw,percent_enabled,metric,metric_unit,metric_name
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
+++ mktemp
++ tmp=/tmp/tmp.t5NdYEguzN
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.t5NdYEguzN -- ./mm-omp 1300 1
+Matrix multiplication took 18.93 seconds
+Matrix multiplication took 18.77 seconds
+Matrix multiplication took 18.79 seconds
+Matrix multiplication took 18.81 seconds
+Matrix multiplication took 18.82 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=1 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.t5NdYEguzN
++ rm -f /tmp/tmp.t5NdYEguzN
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=2
++ OMP_NUM_THREADS=2
+++ mktemp
++ tmp=/tmp/tmp.tsMzXUEM8q
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.tsMzXUEM8q -- ./mm-omp 1300 2
+Matrix multiplication took 9.92 seconds
+Matrix multiplication took 10.00 seconds
+Matrix multiplication took 9.96 seconds
+Matrix multiplication took 9.92 seconds
+Matrix multiplication took 9.96 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=2 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.tsMzXUEM8q
++ rm -f /tmp/tmp.tsMzXUEM8q
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=3
++ OMP_NUM_THREADS=3
+++ mktemp
++ tmp=/tmp/tmp.8QVCGCSAsW
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.8QVCGCSAsW -- ./mm-omp 1300 3
+Matrix multiplication took 6.76 seconds
+Matrix multiplication took 6.70 seconds
+Matrix multiplication took 6.68 seconds
+Matrix multiplication took 6.76 seconds
+Matrix multiplication took 6.64 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=3 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.8QVCGCSAsW
++ rm -f /tmp/tmp.8QVCGCSAsW
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=4
++ OMP_NUM_THREADS=4
+++ mktemp
++ tmp=/tmp/tmp.IfNAslkm78
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.IfNAslkm78 -- ./mm-omp 1300 4
+Matrix multiplication took 5.24 seconds
+Matrix multiplication took 5.19 seconds
+Matrix multiplication took 5.11 seconds
+Matrix multiplication took 5.26 seconds
+Matrix multiplication took 5.12 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=4 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.IfNAslkm78
++ rm -f /tmp/tmp.IfNAslkm78
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=5
++ OMP_NUM_THREADS=5
+++ mktemp
++ tmp=/tmp/tmp.OslcAx0Pkt
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.OslcAx0Pkt -- ./mm-omp 1300 5
+Matrix multiplication took 4.15 seconds
+Matrix multiplication took 4.19 seconds
+Matrix multiplication took 4.15 seconds
+Matrix multiplication took 4.15 seconds
+Matrix multiplication took 4.22 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=5 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.OslcAx0Pkt
++ rm -f /tmp/tmp.OslcAx0Pkt
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=6
++ OMP_NUM_THREADS=6
+++ mktemp
++ tmp=/tmp/tmp.U7m79nSDy5
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.U7m79nSDy5 -- ./mm-omp 1300 6
+Matrix multiplication took 3.48 seconds
+Matrix multiplication took 3.50 seconds
+Matrix multiplication took 3.46 seconds
+Matrix multiplication took 3.50 seconds
+Matrix multiplication took 3.50 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=6 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.U7m79nSDy5
++ rm -f /tmp/tmp.U7m79nSDy5
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=7
++ OMP_NUM_THREADS=7
+++ mktemp
++ tmp=/tmp/tmp.LcZXO5IKU0
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.LcZXO5IKU0 -- ./mm-omp 1300 7
+Matrix multiplication took 2.99 seconds
+Matrix multiplication took 2.97 seconds
+Matrix multiplication took 3.00 seconds
+Matrix multiplication took 3.10 seconds
+Matrix multiplication took 2.98 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=7 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.LcZXO5IKU0
++ rm -f /tmp/tmp.LcZXO5IKU0
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=8
++ OMP_NUM_THREADS=8
+++ mktemp
++ tmp=/tmp/tmp.xsEtr7ozL3
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.xsEtr7ozL3 -- ./mm-omp 1300 8
+Matrix multiplication took 2.73 seconds
+Matrix multiplication took 2.75 seconds
+Matrix multiplication took 2.74 seconds
+Matrix multiplication took 2.72 seconds
+Matrix multiplication took 2.62 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=8 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.xsEtr7ozL3
++ rm -f /tmp/tmp.xsEtr7ozL3
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=9
++ OMP_NUM_THREADS=9
+++ mktemp
++ tmp=/tmp/tmp.7gFc1ya0WV
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.7gFc1ya0WV -- ./mm-omp 1300 9
+Matrix multiplication took 2.50 seconds
+Matrix multiplication took 2.48 seconds
+Matrix multiplication took 2.50 seconds
+Matrix multiplication took 2.51 seconds
+Matrix multiplication took 2.55 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=9 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.7gFc1ya0WV
++ rm -f /tmp/tmp.7gFc1ya0WV
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=10
++ OMP_NUM_THREADS=10
+++ mktemp
++ tmp=/tmp/tmp.Y4KuBqdn6r
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.Y4KuBqdn6r -- ./mm-omp 1300 10
+Matrix multiplication took 2.24 seconds
+Matrix multiplication took 2.23 seconds
+Matrix multiplication took 2.25 seconds
+Matrix multiplication took 2.25 seconds
+Matrix multiplication took 2.23 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=10 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.Y4KuBqdn6r
++ rm -f /tmp/tmp.Y4KuBqdn6r
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=11
++ OMP_NUM_THREADS=11
+++ mktemp
++ tmp=/tmp/tmp.7mbOIvJ8BL
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.7mbOIvJ8BL -- ./mm-omp 1300 11
+Matrix multiplication took 3.07 seconds
+Matrix multiplication took 2.99 seconds
+Matrix multiplication took 2.99 seconds
+Matrix multiplication took 2.99 seconds
+Matrix multiplication took 3.04 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=11 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.7mbOIvJ8BL
++ rm -f /tmp/tmp.7mbOIvJ8BL
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=12
++ OMP_NUM_THREADS=12
+++ mktemp
++ tmp=/tmp/tmp.J4hQJed3MB
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.J4hQJed3MB -- ./mm-omp 1300 12
+Matrix multiplication took 2.82 seconds
+Matrix multiplication took 2.77 seconds
+Matrix multiplication took 2.77 seconds
+Matrix multiplication took 2.80 seconds
+Matrix multiplication took 2.79 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=12 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.J4hQJed3MB
++ rm -f /tmp/tmp.J4hQJed3MB
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=13
++ OMP_NUM_THREADS=13
+++ mktemp
++ tmp=/tmp/tmp.ag4yDIB16z
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.ag4yDIB16z -- ./mm-omp 1300 13
+Matrix multiplication took 2.64 seconds
+Matrix multiplication took 2.58 seconds
+Matrix multiplication took 2.57 seconds
+Matrix multiplication took 2.55 seconds
+Matrix multiplication took 2.59 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=13 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.ag4yDIB16z
++ rm -f /tmp/tmp.ag4yDIB16z
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=14
++ OMP_NUM_THREADS=14
+++ mktemp
++ tmp=/tmp/tmp.1jNJXVYT9G
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.1jNJXVYT9G -- ./mm-omp 1300 14
+Matrix multiplication took 2.49 seconds
+Matrix multiplication took 2.43 seconds
+Matrix multiplication took 2.44 seconds
+Matrix multiplication took 2.45 seconds
+Matrix multiplication took 2.44 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=14 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.1jNJXVYT9G
++ rm -f /tmp/tmp.1jNJXVYT9G
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=15
++ OMP_NUM_THREADS=15
+++ mktemp
++ tmp=/tmp/tmp.bliHJgjt3V
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.bliHJgjt3V -- ./mm-omp 1300 15
+Matrix multiplication took 2.32 seconds
+Matrix multiplication took 2.36 seconds
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.30 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=15 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.bliHJgjt3V
++ rm -f /tmp/tmp.bliHJgjt3V
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=16
++ OMP_NUM_THREADS=16
+++ mktemp
++ tmp=/tmp/tmp.nuAJuPXL5q
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.nuAJuPXL5q -- ./mm-omp 1300 16
+Matrix multiplication took 2.52 seconds
+Matrix multiplication took 2.49 seconds
+Matrix multiplication took 2.58 seconds
+Matrix multiplication took 2.50 seconds
+Matrix multiplication took 2.50 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=16 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.nuAJuPXL5q
++ rm -f /tmp/tmp.nuAJuPXL5q
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=17
++ OMP_NUM_THREADS=17
+++ mktemp
++ tmp=/tmp/tmp.WbsQdBQjy9
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.WbsQdBQjy9 -- ./mm-omp 1300 17
+Matrix multiplication took 2.39 seconds
+Matrix multiplication took 2.40 seconds
+Matrix multiplication took 2.43 seconds
+Matrix multiplication took 2.42 seconds
+Matrix multiplication took 2.38 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=17 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.WbsQdBQjy9
++ rm -f /tmp/tmp.WbsQdBQjy9
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=18
++ OMP_NUM_THREADS=18
+++ mktemp
++ tmp=/tmp/tmp.2IQWExNoVH
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.2IQWExNoVH -- ./mm-omp 1300 18
+Matrix multiplication took 2.42 seconds
+Matrix multiplication took 2.45 seconds
+Matrix multiplication took 2.43 seconds
+Matrix multiplication took 2.43 seconds
+Matrix multiplication took 2.42 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=18 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.2IQWExNoVH
++ rm -f /tmp/tmp.2IQWExNoVH
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=19
++ OMP_NUM_THREADS=19
+++ mktemp
++ tmp=/tmp/tmp.ixnSRqEu9s
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.ixnSRqEu9s -- ./mm-omp 1300 19
+Matrix multiplication took 2.36 seconds
+Matrix multiplication took 2.39 seconds
+Matrix multiplication took 2.37 seconds
+Matrix multiplication took 2.39 seconds
+Matrix multiplication took 2.38 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=19 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.ixnSRqEu9s
++ rm -f /tmp/tmp.ixnSRqEu9s
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=20
++ OMP_NUM_THREADS=20
+++ mktemp
++ tmp=/tmp/tmp.m3RXBYt0Gf
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.m3RXBYt0Gf -- ./mm-omp 1300 20
+Matrix multiplication took 2.34 seconds
+Matrix multiplication took 2.27 seconds
+Matrix multiplication took 2.38 seconds
+Matrix multiplication took 2.26 seconds
+Matrix multiplication took 2.28 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=20 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.m3RXBYt0Gf
++ rm -f /tmp/tmp.m3RXBYt0Gf
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=21
++ OMP_NUM_THREADS=21
+++ mktemp
++ tmp=/tmp/tmp.EHgD4dvuoC
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.EHgD4dvuoC -- ./mm-omp 1300 21
+Matrix multiplication took 2.44 seconds
+Matrix multiplication took 2.61 seconds
+Matrix multiplication took 2.37 seconds
+Matrix multiplication took 2.41 seconds
+Matrix multiplication took 2.41 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=21 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.EHgD4dvuoC
++ rm -f /tmp/tmp.EHgD4dvuoC
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=22
++ OMP_NUM_THREADS=22
+++ mktemp
++ tmp=/tmp/tmp.tgcYPGHY4I
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.tgcYPGHY4I -- ./mm-omp 1300 22
+Matrix multiplication took 2.35 seconds
+Matrix multiplication took 2.49 seconds
+Matrix multiplication took 2.43 seconds
+Matrix multiplication took 2.37 seconds
+Matrix multiplication took 2.40 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=22 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.tgcYPGHY4I
++ rm -f /tmp/tmp.tgcYPGHY4I
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=23
++ OMP_NUM_THREADS=23
+++ mktemp
++ tmp=/tmp/tmp.SKAvCYyVdO
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.SKAvCYyVdO -- ./mm-omp 1300 23
+Matrix multiplication took 2.39 seconds
+Matrix multiplication took 2.35 seconds
+Matrix multiplication took 2.36 seconds
+Matrix multiplication took 2.46 seconds
+Matrix multiplication took 2.39 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=23 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.SKAvCYyVdO
++ rm -f /tmp/tmp.SKAvCYyVdO
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=24
++ OMP_NUM_THREADS=24
+++ mktemp
++ tmp=/tmp/tmp.hxrHwtGHbf
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.hxrHwtGHbf -- ./mm-omp 1300 24
+Matrix multiplication took 2.39 seconds
+Matrix multiplication took 2.45 seconds
+Matrix multiplication took 2.43 seconds
+Matrix multiplication took 2.38 seconds
+Matrix multiplication took 2.46 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=24 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.hxrHwtGHbf
++ rm -f /tmp/tmp.hxrHwtGHbf
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=25
++ OMP_NUM_THREADS=25
+++ mktemp
++ tmp=/tmp/tmp.ocDXrLaTei
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.ocDXrLaTei -- ./mm-omp 1300 25
+Matrix multiplication took 2.41 seconds
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.32 seconds
+Matrix multiplication took 2.40 seconds
+Matrix multiplication took 2.48 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=25 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.ocDXrLaTei
++ rm -f /tmp/tmp.ocDXrLaTei
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=26
++ OMP_NUM_THREADS=26
+++ mktemp
++ tmp=/tmp/tmp.ldrwYsQ69I
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.ldrwYsQ69I -- ./mm-omp 1300 26
+Matrix multiplication took 2.42 seconds
+Matrix multiplication took 2.33 seconds
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.37 seconds
+Matrix multiplication took 2.34 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=26 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.ldrwYsQ69I
++ rm -f /tmp/tmp.ldrwYsQ69I
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=27
++ OMP_NUM_THREADS=27
+++ mktemp
++ tmp=/tmp/tmp.DZerNfZQUw
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.DZerNfZQUw -- ./mm-omp 1300 27
+Matrix multiplication took 2.36 seconds
+Matrix multiplication took 2.33 seconds
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.30 seconds
+Matrix multiplication took 2.33 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=27 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.DZerNfZQUw
++ rm -f /tmp/tmp.DZerNfZQUw
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=28
++ OMP_NUM_THREADS=28
+++ mktemp
++ tmp=/tmp/tmp.JEKaCUIgH7
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.JEKaCUIgH7 -- ./mm-omp 1300 28
+Matrix multiplication took 2.34 seconds
+Matrix multiplication took 2.35 seconds
+Matrix multiplication took 2.38 seconds
+Matrix multiplication took 2.29 seconds
+Matrix multiplication took 2.37 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=28 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.JEKaCUIgH7
++ rm -f /tmp/tmp.JEKaCUIgH7
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=29
++ OMP_NUM_THREADS=29
+++ mktemp
++ tmp=/tmp/tmp.weBP1W2GD7
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.weBP1W2GD7 -- ./mm-omp 1300 29
+Matrix multiplication took 2.26 seconds
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.37 seconds
+Matrix multiplication took 2.40 seconds
+Matrix multiplication took 2.34 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=29 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.weBP1W2GD7
++ rm -f /tmp/tmp.weBP1W2GD7
++ for t in $THREAD_LIST
++ export OMP_NUM_THREADS=30
++ OMP_NUM_THREADS=30
+++ mktemp
++ tmp=/tmp/tmp.DqpAPtinwt
++ perf stat --no-big-num -x, -r 5 -e cycles,instructions,duration_time,fp_arith_inst_retired.scalar_single -o /tmp/tmp.DqpAPtinwt -- ./mm-omp 1300 30
+Matrix multiplication took 2.31 seconds
+Matrix multiplication took 2.29 seconds
+Matrix multiplication took 2.34 seconds
+Matrix multiplication took 2.30 seconds
+Matrix multiplication took 2.31 seconds
++ awk -F, -v OFS=, -v jid=784190 -v n=1300 -v thr=30 '
+    $0 !~ /^#/ && NF { print jid, n, thr, $0 }
+  ' /tmp/tmp.DqpAPtinwt
++ rm -f /tmp/tmp.DqpAPtinwt
++ echo 'perf CSV saved to: logs/784190_perf.csv'
+++ date
++ echo 'Finished: Tue Sep  9 11:52:47 AM +08 2025'

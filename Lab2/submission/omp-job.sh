@@ -4,9 +4,9 @@
 #SBATCH --job-name=lab2-ex11-e0694444
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
+#SBATCH --time=00:30:00
 #SBATCH --partition=xs-4114
 #SBATCH --mem=1gb
-#SBATCH --time=00:03:00
 #SBATCH --output=logs/ex11.slurmlog
 #SBATCH --error=logs/ex11_err.slurmlog
 #SBATCH --mail-type=NONE
@@ -38,20 +38,24 @@ echo "Running perf stat..."
 tmp="logs/${SLURM_JOB_ID:-$$}_perf.tmp"
 MASTER_CSV="logs/${SLURM_JOB_ID:-$$}_perf.csv"
 MAX_THREADS="${SLURM_CPUS_ON_NODE:-$(nproc)}" # Sensible number of threads - logical core count
-THREAD_LIST="$(seq 1 $(( MAX_THREADS + 10 )) )" # NOTE: We do 10 additional threads to see if performance falls off
+#THREAD_LIST="$(seq 1 $(( MAX_THREADS + 10 )) )" # NOTE: We do 10 additional threads to see if performance falls off
+THREAD_LIST="$(seq 1 30 )" # xs-4114 has 20 threads, i7-7700 has 8 threads, so we run 30
+
+# Echo thread count info
+echo "Current partition ${SLURM_JOB_PARTITION} has ${MAX_THREADS} threads." 
 
 # If output file doesn't exist, we add a CSV header once
 if [ ! -f "$MASTER_CSV" ]; then 
     echo "$columns" > "$MASTER_CSV"
 fi
 
-# CSV-style perf output; 10 repeats for mean±stddev in the last lines
+# CSV-style perf output; 5 repeats for mean±stddev in the last lines
 for t in $THREAD_LIST; do
   export OMP_NUM_THREADS="$t"
   tmp="$(mktemp)"
 
   # perf → temp (CSV), your program runs with size=$1 and threads=$t
-  perf stat --no-big-num -x, -r 10 -e "$events" \
+  perf stat --no-big-num -x, -r 5 -e "$events" \
     -o "$tmp" -- ./mm-omp "$1" "$t"
 
   # append non-comment, non-empty lines; prefix with jobid & params
