@@ -1,308 +1,308 @@
 Running job: lab2-ex11-e0694444 on soctf-pdc-004.ddns.comp.nus.edu.sg
-Started: Tue Sep  9 11:43:28 AM +08 2025
+Started: Tue Sep  9 12:47:48 PM +08 2025
 Args: size=1300
 Compiling...
 Running perf stat...
 Current partition xs-4114 has 20 threads.
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 1 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 1 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 1 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 1 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 1 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 2 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 2 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 2 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 2 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 2 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 3 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 3 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 3 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 3 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 3 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 4 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 4 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 4 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 4 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 4 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 5 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 5 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 5 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 5 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 5 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 6 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 6 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 6 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 6 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 6 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 7 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 7 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 7 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 7 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 7 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 8 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 8 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 8 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 8 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 8 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 9 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 9 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 9 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 9 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 9 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 10 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 10 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 10 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 10 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 10 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 11 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 11 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 11 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 11 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 11 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 12 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 12 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 12 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 12 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 12 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 13 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 13 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 13 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 13 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 13 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 14 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 14 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 14 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 14 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 14 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 15 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 15 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 15 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 15 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 15 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 16 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 16 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 16 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 16 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 16 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 17 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 17 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 17 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 17 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 17 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 18 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 18 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 18 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 18 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 18 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 19 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 19 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 19 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 19 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 19 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 20 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 20 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 20 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 20 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 20 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 21 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 21 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 21 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 21 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 21 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 22 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 22 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 22 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 22 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 22 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 23 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 23 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 23 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 23 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 23 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 24 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 24 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 24 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 24 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 24 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 25 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 25 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 25 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 25 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 25 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 26 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 26 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 26 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 26 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 26 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 27 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 27 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 27 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 27 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 27 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 28 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 28 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 28 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 28 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 28 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 29 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 29 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 29 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 29 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 29 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 30 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 30 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 30 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 30 threads
-Usage: ./mm-omp <size> <threads>
+Usage: ./mm-omp-ex12 <size> <threads>
 Matrix multiplication of size 1300 using 30 threads
-perf CSV saved to: logs/784190_perf.csv
-Finished: Tue Sep  9 11:52:47 AM +08 2025
+perf CSV saved to: logs/784254_perf.csv
+Finished: Tue Sep  9 12:53:24 PM +08 2025
